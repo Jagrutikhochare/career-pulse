@@ -1,0 +1,4 @@
+/* App.css - Global App-level container overrides if needed */
+#root {
+  min-height: 100vh;
+}

@@ -1,0 +1,86 @@
+/* StatusBadge Styles */
+.status-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-weight: 600;
+  border-radius: var(--radius-full);
+  border: 1px solid transparent;
+  white-space: nowrap;
+  letter-spacing: 0.01em;
+}
+
+.status-badge.size-sm {
+  font-size: 0.725rem;
+  padding: 0.15rem 0.55rem;
+}
+
+.status-badge.size-md {
+  font-size: 0.8rem;
+  padding: 0.25rem 0.75rem;
+}
+
+.status-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+}
+
+/* Applied - Sky Blue */
+.status-applied {
+  background-color: var(--status-applied-bg);
+  color: var(--status-applied-text);
+  border-color: var(--status-applied-border);
+}
+.status-applied .status-dot {
+  background-color: var(--status-applied-text);
+}
+
+/* Shortlisted - Violet */
+.status-shortlisted {
+  background-color: var(--status-shortlisted-bg);
+  color: var(--status-shortlisted-text);
+  border-color: var(--status-shortlisted-border);
+}
+.status-shortlisted .status-dot {
+  background-color: var(--status-shortlisted-text);
+  box-shadow: 0 0 6px rgba(109, 40, 217, 0.4);
+}
+
+/* Interviewing / Interviews - Amber */
+.status-interviewing,
+.status-interviews,
+.status-interview {
+  background-color: var(--status-interview-bg);
+  color: var(--status-interview-text);
+  border-color: var(--status-interview-border);
+}
+.status-interviewing .status-dot,
+.status-interviews .status-dot,
+.status-interview .status-dot {
+  background-color: var(--status-interview-text);
+  box-shadow: 0 0 6px rgba(180, 83, 9, 0.4);
+}
+
+/* Selected / Offer - Emerald */
+.status-selected,
+.status-offer {
+  background-color: var(--status-selected-bg);
+  color: var(--status-selected-text);
+  border-color: var(--status-selected-border);
+}
+.status-selected .status-dot,
+.status-offer .status-dot {
+  background-color: var(--status-selected-text);
+  box-shadow: 0 0 6px rgba(21, 128, 61, 0.4);
+}
+
+/* Rejected - Rose */
+.status-rejected {
+  background-color: var(--status-rejected-bg);
+  color: var(--status-rejected-text);
+  border-color: var(--status-rejected-border);
+}
+.status-rejected .status-dot {
+  background-color: var(--status-rejected-text);
+}

@@ -1,0 +1,130 @@
+/* MetricCard Styles */
+.metric-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: 1.35rem 1.5rem;
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: all var(--transition-fast);
+  position: relative;
+  overflow: hidden;
+}
+
+.metric-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: transparent;
+  transition: background var(--transition-fast);
+}
+
+.metric-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+  border-color: #cbd5e1;
+}
+
+.metric-card.trend-highlight::before {
+  background: var(--primary-gradient);
+}
+
+.metric-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.75rem;
+}
+
+.metric-title {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.metric-icon-wrapper {
+  width: 38px;
+  height: 38px;
+  border-radius: var(--radius-md);
+  background: var(--bg-card-subtle);
+  color: var(--primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all var(--transition-fast);
+}
+
+.metric-card:hover .metric-icon-wrapper {
+  background: var(--primary-light);
+  transform: scale(1.05);
+}
+
+.metric-value {
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--text-main);
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+}
+
+.metric-subtitle {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  margin-top: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.trend-highlight .metric-subtitle {
+  color: var(--primary);
+  font-weight: 600;
+}
+
+/* Card Variants for Pipeline Stages */
+.metric-card.variant-total::before {
+  background: var(--primary-gradient);
+}
+.metric-card.variant-total .metric-icon-wrapper {
+  background: var(--primary-light);
+  color: var(--primary);
+}
+
+.metric-card.variant-applied::before {
+  background: var(--status-applied-text);
+}
+.metric-card.variant-applied .metric-icon-wrapper {
+  background: var(--status-applied-bg);
+  color: var(--status-applied-text);
+}
+
+.metric-card.variant-shortlisted::before {
+  background: var(--status-shortlisted-text);
+}
+.metric-card.variant-shortlisted .metric-icon-wrapper {
+  background: var(--status-shortlisted-bg);
+  color: var(--status-shortlisted-text);
+}
+
+.metric-card.variant-interviews::before {
+  background: var(--status-interview-text);
+}
+.metric-card.variant-interviews .metric-icon-wrapper {
+  background: var(--status-interview-bg);
+  color: var(--status-interview-text);
+}
+
+.metric-card.variant-selected::before {
+  background: var(--status-selected-text);
+}
+.metric-card.variant-selected .metric-icon-wrapper {
+  background: var(--status-selected-bg);
+  color: var(--status-selected-text);
+}
